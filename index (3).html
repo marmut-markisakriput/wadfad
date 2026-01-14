@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('view.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(235, 156, 120, 0.7);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .navbar a {
+            margin: 0 120px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.4s;
+        }
+
+        .navbar a:hover {
+            color: #000;
+            text-shadow: 0 0 10px #fff, 
+                         0 0 20px #ffffff, 
+                         0 0 30px #ffffff;
+        }
+
+        .content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .content h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .content p {
+            font-size: 18px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="navbar">
+        <a onclick="slideTo('INFO.html')">INFO</a>
+        <a onclick="slideTo('TENTANG.html')">TENTANG</a>
+        <a onclick="slideTo('KONTAK.html')">KONTAK</a>
+        <a onclick="slideTo('KAMI.html')">KAMI</a>
+    </section>
+
+    <section class="content">
+        <h1>KAMI BOY</h1>
+
+    </section>
+
+        <script>
+          function slideTo(url) {
+            document.body.style.transition = "transform 0.8s ease-in-out";
+            document.body.style.transform = "translateX(-100%)";
+            setTimeout(() => {
+              window.location.href = url;
+            }, 800); 
+          }
+    </script>
+
+
+</body>
+</html>
